@@ -1,5 +1,5 @@
 // 앱이 인터넷 없이도 열리도록 기본 파일을 저장해 둡니다
-var CACHE = 'fgfcw-v16';
+var CACHE = 'fgfcw-v17';
 var FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest',
   'icons/emblem.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 

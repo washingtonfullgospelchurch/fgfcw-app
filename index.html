@@ -60,6 +60,22 @@
         </div>
       </div>
 
+      <section class="bible" aria-labelledby="bibleTitle">
+        <h2 id="bibleTitle" class="bible-title"><svg viewBox="0 0 24 24"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5z M4 21.5A2.5 2.5 0 0 0 6.5 24H20v-5 M12 6v7 M9 9h6"/></svg>성경 읽기</h2>
+        <div class="bible-btns">
+          <a class="bible-btn ko" href="https://prs.app/ko/bible/gen.1.nkrv">
+            <span class="bible-lang">한글</span>
+            <strong>개역개정</strong>
+            <small>성경 읽기 · 듣기</small>
+          </a>
+          <a class="bible-btn en" href="https://www.bible.com/bible/111/GEN.1.NIV">
+            <span class="bible-lang">English</span>
+            <strong>YouVersion</strong>
+            <small>NIV Bible</small>
+          </a>
+        </div>
+      </section>
+
       <section class="card rj" aria-labelledby="rjTitle">
         <div class="rj-top">
           <div><span class="kicker">READING JESUS</span><h2 id="rjTitle">오늘의 통독</h2></div>
@@ -78,16 +94,13 @@
           <small id="rjDay"></small>
           <strong id="rjPassage"></strong>
         </div>
+        <div class="rj-read" id="rjRead">
+          <a class="rj-read-btn" id="rjReadKo" href="#"><svg viewBox="0 0 24 24"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5z M4 21.5A2.5 2.5 0 0 0 6.5 24H20v-5"/></svg>본문 읽기 (개역개정)</a>
+          <a class="rj-read-btn en" id="rjReadEn" href="#">English</a>
+        </div>
         <div class="rj-progress" id="rjProgWrap"><div class="rj-bar"><span id="rjBar"></span></div><small id="rjProg"></small></div>
         <button class="link-btn rj-today" id="rjToday" hidden>오늘로 돌아가기</button>
       </section>
-
-      <div class="pillars" aria-label="교회 비전">
-        <div><b>PRAYER</b><span>기도</span></div>
-        <div><b>WORD</b><span>말씀</span></div>
-        <div><b>SERVE</b><span>섬김</span></div>
-        <div><b>GO</b><span>전도·선교</span></div>
-      </div>
 
       <div class="quick">
         <button class="quick-item" data-go="give"><svg viewBox="0 0 24 24"><path d="M12 13s-4-2.6-4-5.4A2.2 2.2 0 0 1 12 6.3a2.2 2.2 0 0 1 4 1.3C16 10.4 12 13 12 13z M3 15h3l3.5 1.5H14a1.5 1.5 0 0 1 0 3H9.5 M14 18.5l5-2.5a1.5 1.5 0 0 1 1.5 2.6L15 21H3"/></svg>온라인 헌금</button>

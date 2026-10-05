@@ -318,3 +318,21 @@ svg.inline{width:18px;height:18px;vertical-align:-3px}
 .mission-name{display:flex;flex-direction:column;gap:2px;padding-top:12px;margin-top:4px;border-top:1px solid var(--line)}
 .mission-name strong{font-size:16px;color:var(--navy)}
 .mission-name span{font-size:12px;color:var(--muted);letter-spacing:.02em}
+
+/* 성경 읽기 */
+.bible{display:flex;flex-direction:column;gap:12px}
+.bible-title{display:flex;align-items:center;gap:8px;font-size:18px}
+.bible-title svg{width:22px;height:22px;color:var(--navy)}
+.bible-btns{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bible-btn{position:relative;overflow:hidden;border-radius:20px;padding:18px 16px 16px;min-height:118px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;color:#fff;box-shadow:0 10px 24px rgba(28,31,102,.18)}
+.bible-btn::after{content:"";position:absolute;right:-18px;top:-18px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.12)}
+.bible-btn.ko{background:linear-gradient(150deg,#2E3092,#1C1F66)}
+.bible-btn.en{background:linear-gradient(150deg,#17A3A0,#0B6E8F)}
+.bible-lang{position:absolute;left:16px;top:14px;font-size:11px;font-weight:800;letter-spacing:.12em;opacity:.85}
+.bible-btn strong{font-family:'Gowun Batang',serif;font-size:22px}
+.bible-btn small{font-size:12px;opacity:.85}
+.rj-read{display:grid;grid-template-columns:1fr auto;gap:8px}
+.rj-read[hidden]{display:none}
+.rj-read-btn{height:46px;border-radius:14px;background:var(--tint);color:var(--navy);font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 16px}
+.rj-read-btn svg{width:18px;height:18px}
+.rj-read-btn.en{background:#E3F5F4;color:#0B6E8F}
