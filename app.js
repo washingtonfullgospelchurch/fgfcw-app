@@ -123,13 +123,21 @@
 
     // 다음 예배 (주일 · 수요 · 금요)
     var now = new Date(), best = null;
+    // 다음 예배 후보: 주일·수요·금요 + 새벽예배(월~토, 토요일은 시간 다름, 월요일은 온라인)
+    var slots = [];
     ws.forEach(function (w) {
-      if (typeof w.day !== 'number') return;
+      if (typeof w.day === 'number') slots.push({ day: w.day, h: w.h, m: w.m, name: w.name });
+      (w.days || []).forEach(function (dd) {
+        var t = dd === 6 && w.sat ? w.sat : [w.h, w.m];
+        slots.push({ day: dd, h: t[0], m: t[1], name: (w.nextName || w.name) + (dd === 1 && w.monOnline ? ' (온라인)' : '') });
+      });
+    });
+    slots.forEach(function (s) {
       for (var add = 0; add < 8; add++) {
-        var d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + add, w.h, w.m);
-        if (d.getDay() !== w.day) continue;
+        var d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + add, s.h, s.m);
+        if (d.getDay() !== s.day) continue;
         if (d.getTime() + 60 * 60 * 1000 < now.getTime()) continue; // 시작 후 1시간까지는 '지금'으로 표시
-        if (!best || d < best.d) best = { d: d, w: w };
+        if (!best || d < best.d) best = { d: d, w: { name: s.name, h: s.h, m: s.m } };
         break;
       }
     });

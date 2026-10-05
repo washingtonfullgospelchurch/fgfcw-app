@@ -59,7 +59,23 @@
     {
       "name": "매일 새벽예배",
       "en": "Morning Prayer",
-      "time": "오전 5:30 · 토요일 6:30"
+      "time": "오전 5:30 · 토요일 6:30",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "h": 5,
+      "m": 30,
+      "sat": [
+        6,
+        30
+      ],
+      "monOnline": true,
+      "nextName": "새벽예배"
     }
   ],
   "schoolWorship": [
