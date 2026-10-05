@@ -420,16 +420,40 @@
   /* ---------- 설치 ---------- */
   var ua = navigator.userAgent;
   var isIos = /iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isAndroid = /android/i.test(ua);
   var standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  var isKakao = /KAKAOTALK/i.test(ua);
+  var inApp = isKakao || /FBAN|FBAV|Instagram|NAVER\(inapp|Line\/|DaumApps|everytimeApp|BAND\//i.test(ua);
   var deferred = null;
   var sheet = document.getElementById('sheet');
   var chip = document.getElementById('installTop');
   var installNow = document.getElementById('installNow');
+  var bar = document.getElementById('installBar');
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  // 1) 카톡·인스타 같은 앱 안에서 열리면 설치가 안 되므로 인터넷 앱으로 내보내기
+  var here = location.href.split('#')[0];
+  function openExternal() {
+    if (isKakao) { location.href = 'kakaotalk://web/openExternal?url=' + encodeURIComponent(here); return; }
+    if (isAndroid) { location.href = 'intent://' + here.replace(/^https?:\/\//, '') + '#Intent;scheme=https;package=com.android.chrome;end'; }
+  }
+  if (inApp && !standalone) {
+    var ib = document.getElementById('inappBar');
+    document.getElementById('inappMsg').textContent = isIos
+      ? (isKakao ? '아래 버튼을 누르면 Safari로 열려요. 안 열리면 오른쪽 아래 ⋯ 또는 공유 버튼에서 "Safari로 열기"를 눌러 주세요.' : '오른쪽 위 ⋯ 메뉴에서 "Safari로 열기" 또는 "외부 브라우저로 열기"를 눌러 주세요.')
+      : '아래 버튼을 누르면 Chrome으로 열려요.';
+    document.getElementById('inappOpen').hidden = isIos && !isKakao;
+    ib.hidden = false;
+    document.getElementById('inappOpen').addEventListener('click', openExternal);
+    if (isKakao && /[?&]install/.test(location.search)) setTimeout(openExternal, 300); // 설치 링크는 바로 내보내기
+  }
 
   function openSheet() {
-    document.getElementById('installIos').hidden = !isIos && !!deferred;
-    document.getElementById('installAndroid').hidden = isIos;
+    var showAndroid = !isIos;
+    document.getElementById('installAndroid').hidden = !showAndroid;
+    document.getElementById('installIos').hidden = !isIos && (isAndroid || !!deferred);
     installNow.hidden = !deferred;
+    document.getElementById('androidManual').hidden = !!deferred;
     sheet.hidden = false;
   }
   function closeSheet() { sheet.hidden = true; }
@@ -440,18 +464,29 @@
   document.getElementById('closeInstall').addEventListener('click', closeSheet);
   sheet.addEventListener('click', function (e) { if (e.target === sheet) closeSheet(); });
 
-  window.addEventListener('beforeinstallprompt', function (e) {
-    e.preventDefault(); deferred = e;
+  // 2) 처음 오신 분께 아래쪽에 설치 배너 (닫으면 다시 안 보임)
+  function maybeBar() {
+    if (standalone || inApp || store('fgfcw-bar-closed')) return;
+    if (isIos || isAndroid || deferred) bar.hidden = false;
+  }
+  setTimeout(maybeBar, 1500);
+  document.getElementById('installBarBtn').addEventListener('click', function () {
+    if (deferred) { deferred.prompt(); deferred.userChoice.finally(function () { deferred = null; bar.hidden = true; }); }
+    else openSheet();
   });
+  document.getElementById('installBarX').addEventListener('click', function () { bar.hidden = true; store('fgfcw-bar-closed', '1'); });
+
+  // 3) 안드로이드 크롬: 버튼 한 번으로 바로 설치
+  window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); deferred = e; maybeBar(); });
   installNow.addEventListener('click', function () {
     if (!deferred) return;
     deferred.prompt();
     deferred.userChoice.finally(function () { deferred = null; closeSheet(); });
   });
-  window.addEventListener('appinstalled', function () { chip.hidden = true; closeSheet(); });
+  window.addEventListener('appinstalled', function () { chip.hidden = true; bar.hidden = true; closeSheet(); });
 
-  /* 사이트 주소 뒤에 ?install 을 붙여 공유하면 설치 안내가 바로 열립니다 */
-  if (!standalone && /[?&]install/.test(location.search)) setTimeout(openSheet, 600);
+  /* 설치 링크: fgfcw.netlify.app/install 또는 주소 뒤 ?install → 설치 안내가 바로 열림 */
+  if (!standalone && !inApp && /[?&]install/.test(location.search)) setTimeout(openSheet, 600);
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js'); });

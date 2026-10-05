@@ -12,3 +12,9 @@
   for = "/sw.js"
   [headers.values]
     Cache-Control = "no-cache"
+
+# 짧은 설치 주소: fgfcw.netlify.app/install
+[[redirects]]
+  from = "/install"
+  to = "/?install"
+  status = 302

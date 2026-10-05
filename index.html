@@ -241,26 +241,60 @@
   </nav>
 </div>
 
+<!-- 카톡·인스타 등 앱 안에서 열렸을 때 -->
+<div class="inapp" id="inappBar" hidden>
+  <strong>설치하려면 인터넷 앱으로 열어 주세요</strong>
+  <span id="inappMsg"></span>
+  <button class="btn-primary" id="inappOpen">인터넷 앱으로 열기</button>
+</div>
+
+<!-- 처음 오신 분께 보이는 설치 배너 -->
+<div class="install-bar" id="installBar" hidden>
+  <img src="icons/emblem.png" alt="" width="40" height="40">
+  <div><strong>교회 앱으로 설치하기</strong><small>홈 화면에 교회 로고가 생겨요</small></div>
+  <button class="btn-primary" id="installBarBtn">설치</button>
+  <button class="install-bar-x" id="installBarX" aria-label="닫기"><svg viewBox="0 0 24 24"><path d="M6 6l12 12 M18 6L6 18"/></svg></button>
+</div>
+
 <!-- 설치 안내 -->
 <div class="sheet-bg" id="sheet" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
     <button class="sheet-close" id="closeInstall" aria-label="닫기"><svg viewBox="0 0 24 24"><path d="M6 6l12 12 M18 6L6 18"/></svg></button>
     <div class="sheet-icon"><img src="icons/emblem.png" alt="" width="68" height="68"></div>
     <h2 id="sheetTitle">교회 앱 설치하기</h2>
-    <p class="sub center">앱스토어 없이 홈 화면에 바로 추가할 수 있어요</p>
+    <p class="sub center">앱스토어 없이 10초면 홈 화면에 생겨요</p>
+
     <div id="installAndroid" class="card steps">
       <strong>안드로이드</strong>
-      <button class="btn-primary" id="installNow">지금 설치하기</button>
-      <ol><li>버튼이 안 되면 Chrome 오른쪽 위 ⋮ 메뉴를 눌러요</li><li>"앱 설치" 또는 "홈 화면에 추가"를 눌러요</li></ol>
+      <button class="btn-primary big" id="installNow">지금 설치하기</button>
+      <div id="androidManual">
+        <ol>
+          <li>오른쪽 위 <b>⋮</b> 메뉴를 눌러요</li>
+          <li><b>"앱 설치"</b> 또는 <b>"홈 화면에 추가"</b>를 눌러요</li>
+        </ol>
+      </div>
     </div>
+
     <div id="installIos" class="card steps">
       <strong>아이폰</strong>
-      <ol>
-        <li>Safari로 이 페이지를 열어요 (카톡 안에서 열렸다면 오른쪽 아래 Safari 아이콘으로 열기)</li>
-        <li>화면 아래 <svg class="inline" viewBox="0 0 24 24"><path d="M12 3v12 M8 7l4-4 4 4 M5 11v9h14v-9"/></svg> 공유 버튼을 눌러요</li>
-        <li>"홈 화면에 추가"를 누르면 끝!</li>
-      </ol>
+      <div class="ios-step">
+        <span class="num">1</span>
+        <div><p>화면 아래(또는 주소창 옆)의 <b>공유 버튼</b>을 눌러요</p>
+          <div class="mock-bar"><span></span><span></span><span class="hl"><svg viewBox="0 0 24 24"><path d="M12 3v12 M8 7l4-4 4 4 M5 11v9h14v-9"/></svg></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="ios-step">
+        <span class="num">2</span>
+        <div><p>메뉴를 위로 올려 <b>"홈 화면에 추가"</b>를 눌러요</p>
+          <div class="mock-menu"><div>복사</div><div class="hl">홈 화면에 추가<svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z M12 8v8 M8 12h8"/></svg></div><div>즐겨찾기 추가</div></div>
+        </div>
+      </div>
+      <div class="ios-step">
+        <span class="num">3</span>
+        <div><p>오른쪽 위 <b>"추가"</b>를 누르면 끝! 홈 화면에 교회 로고가 생겨요</p></div>
+      </div>
     </div>
+    <p class="sub-note center">설치 후에는 홈 화면의 교회 로고를 눌러 앱처럼 쓰시면 돼요.</p>
   </div>
 </div>
 
