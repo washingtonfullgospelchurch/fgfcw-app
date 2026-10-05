@@ -1,0 +1,659 @@
+{
+  "_안내": "매주 이 파일만 고치면 앱 내용이 바뀝니다. 따옴표(\")와 쉼표(,) 위치를 지켜 주세요.",
+  "church": {
+    "phone": "(703) 642-3267",
+    "address": "6401 Lincolnia Rd, Alexandria, VA 22312",
+    "pastor": "윤창재 담임목사",
+    "website": "http://www.wfgtv.com/",
+    "greeting": "워싱톤순복음제일교회와 세상의 중심인 당신을 통해 하나님은 지금도 놀라운 일을 계획하고 계십니다.\n한 사람 한 사람 모이면 교회가 부흥할 것이고, 교회가 부흥하면 미국이 변화되고, 미국이 변화되면 온 세상에 하나님의 나라가 임할 줄 믿습니다.\n워싱톤순복음제일교회에 오신 여러분 모두를 예수님의 이름으로 축복하고 환영합니다!"
+  },
+  "worship": [
+    {
+      "name": "주일 1부 예배",
+      "en": "Sunday Service 1 (영상)",
+      "time": "주일 오전 7:00",
+      "day": 0,
+      "h": 7,
+      "m": 0
+    },
+    {
+      "name": "주일 2부 예배",
+      "en": "Sunday Service 2",
+      "time": "주일 오전 10:00",
+      "day": 0,
+      "h": 10,
+      "m": 0,
+      "interp": true
+    },
+    {
+      "name": "청년 영어예배 (주일)",
+      "en": "English Ministry",
+      "time": "주일 오전 10:00",
+      "day": 0,
+      "h": 10,
+      "m": 0,
+      "interp": true
+    },
+    {
+      "name": "청년 영어예배 (금요)",
+      "en": "English Ministry Friday",
+      "time": "금요일 오후 7:30"
+    },
+    {
+      "name": "수요말씀강해",
+      "en": "Wed. Expository Preaching",
+      "time": "수요일 오전 10:30",
+      "day": 3,
+      "h": 10,
+      "m": 30
+    },
+    {
+      "name": "금요성령대망회",
+      "en": "Friday Worship",
+      "time": "금요일 오후 7:30",
+      "day": 5,
+      "h": 19,
+      "m": 30,
+      "interp": true
+    },
+    {
+      "name": "매일 새벽예배",
+      "en": "Morning Prayer",
+      "time": "오전 5:30 · 토요일 6:30"
+    }
+  ],
+  "schoolWorship": [
+    {
+      "name": "유아·유치·초등부 주일예배",
+      "time": "주일 오전 10:00"
+    },
+    {
+      "name": "유아·유치·초등부 금요예배",
+      "time": "금요일 오후 7:30"
+    },
+    {
+      "name": "중고등부 주일예배",
+      "time": "주일 오전 10:00"
+    },
+    {
+      "name": "중고등부 금요예배",
+      "time": "금요일 오후 7:30"
+    }
+  ],
+  "playlists": {
+    "main": [
+      {
+        "title": "주일예배",
+        "en": "Sunday Service",
+        "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2kvx47AWIWcv06eFgdRhEEx",
+        "thumb": "https://i.ytimg.com/vi/-nIzCboskqc/hqdefault.jpg",
+        "count": 141
+      },
+      {
+        "title": "금요성령대망회",
+        "en": "Friday Worship",
+        "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2mBQY6BVdAtQ4rIzJPqYvY8",
+        "thumb": "https://i.ytimg.com/vi/BvBZaDt5l3Y/hqdefault.jpg",
+        "count": 136
+      },
+      {
+        "title": "새벽기도회",
+        "en": "Morning Prayer",
+        "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2kW8LXONnuLbPfgplP7FIE5",
+        "thumb": "https://i.ytimg.com/vi/hfKsSgbFV8g/hqdefault.jpg",
+        "count": 736
+      },
+      {
+        "title": "수요말씀강해",
+        "en": "Wed. Expository Preaching",
+        "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2li8yQLCRSL-t_pvwOFfYFx",
+        "thumb": "https://i.ytimg.com/vi/9ri7G3Njbi8/hqdefault.jpg",
+        "count": 133
+      }
+    ],
+    "groups": [
+      {
+        "title": "말씀 · 기도",
+        "items": [
+          {
+            "title": "말씀 한 조각",
+            "en": "Message Clips",
+            "url": "https://www.youtube.com/playlist?list=PLGndeFCQcmGQ",
+            "thumb": "https://i.ytimg.com/vi/aZFoKxMscZw/hqdefault.jpg"
+          },
+          {
+            "title": "연합중보기도회",
+            "en": "Intercessory Prayer",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2nNbGqJOigdboNKBOgZ7twr",
+            "thumb": "https://i.ytimg.com/vi/iVwPayap1Qo/hqdefault.jpg",
+            "count": 56
+          },
+          {
+            "title": "중보기도회",
+            "en": "Judah & Praise team",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2kQtrogsfutLT_0Scv1K4p1",
+            "thumb": "https://i.ytimg.com/vi/bI00kd9Q0f8/hqdefault.jpg"
+          },
+          {
+            "title": "12시간 예배와 기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2khejNVbjbH_Odox_I5CBdL",
+            "thumb": "https://i.ytimg.com/vi/BvBZaDt5l3Y/hqdefault.jpg",
+            "count": 10
+          },
+          {
+            "title": "50시간 기도회",
+            "en": "24시간 경배의대로 연합예배",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2lWn5w9bAxBqD5-vdJpGveK",
+            "thumb": "https://i.ytimg.com/vi/WsCkjzm6uAo/hqdefault.jpg"
+          },
+          {
+            "title": "2024 사순절 묵상",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2knNsVnRTvLxLjb2z1KfJrp",
+            "thumb": "https://i.ytimg.com/vi/9uYSZQIFD0M/hqdefault.jpg",
+            "count": 40
+          }
+        ]
+      },
+      {
+        "title": "특별새벽기도회",
+        "items": [
+          {
+            "title": "2026 열두광주리 새벽기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2mNX2XTv_BH2mquKiH1ZoCM",
+            "thumb": "https://i.ytimg.com/vi/xtHqr5TZzac/hqdefault.jpg",
+            "count": 13
+          },
+          {
+            "title": "2026 고난주간 특별새벽기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2kDN5rTCa-9kypSaKl7fbjT",
+            "thumb": "https://i.ytimg.com/vi/8VkB7ZqNRko/hqdefault.jpg",
+            "count": 6
+          },
+          {
+            "title": "2025 온성도감사 특별새벽기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2mi6BGqOWfl6xv296FfW4Zp",
+            "thumb": "https://i.ytimg.com/vi/I_-llVLg_i0/hqdefault.jpg",
+            "count": 7
+          },
+          {
+            "title": "2025 다음세대 특별새벽기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2l5SHVUvJgll2FwYKwGNTxh",
+            "thumb": "https://i.ytimg.com/vi/Jas_bbbzSsk/hqdefault.jpg",
+            "count": 6
+          },
+          {
+            "title": "2025 고난주간 특별새벽기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2nGesefyX854moP-LKa2BvC",
+            "thumb": "https://i.ytimg.com/vi/0r5GMh_YSJk/hqdefault.jpg",
+            "count": 7
+          },
+          {
+            "title": "2025 열두광주리 특별새벽기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2nCVeTQ175PVGSjC41b0uEg",
+            "thumb": "https://i.ytimg.com/vi/fh5WMOypHCo/hqdefault.jpg",
+            "count": 12
+          },
+          {
+            "title": "2024 온성도감사 특별새벽기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2l2sj5yPoRpLCasWtgSrAvM",
+            "thumb": "https://i.ytimg.com/vi/jVLdWVa5NIY/hqdefault.jpg",
+            "count": 6
+          },
+          {
+            "title": "2024 고난주간 특별새벽기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2nGnSytZ23Ynb2gOkz9ocfW",
+            "thumb": "https://i.ytimg.com/vi/q0pWyRY12cU/hqdefault.jpg",
+            "count": 6
+          },
+          {
+            "title": "2024 열두광주리 새벽기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2m3iiu9q5F3hNmW9Imi9cR8",
+            "thumb": "https://i.ytimg.com/vi/zv50aJX9Wl0/hqdefault.jpg",
+            "count": 18
+          },
+          {
+            "title": "2023 온성도감사 새벽기도회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2kIamVHjWzHHGEQKtLBsMdT",
+            "thumb": "https://i.ytimg.com/vi/zoEhGmV6b6Y/hqdefault.jpg",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "title": "부흥성회 · 절기예배",
+        "items": [
+          {
+            "title": "2026 춘계부흥성회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2kV43yPkAovHoGvKrP9e_ng",
+            "thumb": "https://i.ytimg.com/vi/uX36M4VkWsg/hqdefault.jpg",
+            "count": 3
+          },
+          {
+            "title": "2025 춘계부흥성회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2lIL2kqI6kYQEmdS9w_VdAx",
+            "thumb": "https://i.ytimg.com/vi/8JBAZEsEIsU/hqdefault.jpg",
+            "count": 3
+          },
+          {
+            "title": "2024 추계부흥성회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2kCwoAbqeC0g784-Wl42-BS",
+            "thumb": "https://i.ytimg.com/vi/Vz2lUXirXw0/hqdefault.jpg",
+            "count": 3
+          },
+          {
+            "title": "2023 추계부흥성회",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2mrvtZ3RgjqlVUKpQ-J6zCL",
+            "thumb": "https://i.ytimg.com/vi/ObIM9W6_IFM/hqdefault.jpg",
+            "count": 5
+          },
+          {
+            "title": "성탄 감사 예배 2025",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2nHIOAAtefnwgxJPHboRKka",
+            "thumb": "https://i.ytimg.com/vi/9HNdsK5LkgY/hqdefault.jpg"
+          },
+          {
+            "title": "2025 송구영신예배",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2mZpOemUht9V0ISCcPpAEtz",
+            "thumb": "https://i.ytimg.com/vi/r6Cb4sQmCuM/hqdefault.jpg"
+          },
+          {
+            "title": "2024 송구영신예배",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2m3qUoxBZSZFphemCRTZD1t",
+            "thumb": "https://i.ytimg.com/vi/-UCK9ePvO_k/hqdefault.jpg"
+          }
+        ]
+      },
+      {
+        "title": "다음세대 · 세미나",
+        "items": [
+          {
+            "title": "FGFCW 중고등부",
+            "en": "Youth",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2m8nygWnW0O0fMM9l19JwjA",
+            "thumb": "https://i.ytimg.com/vi/HwCxP6dZ15I/hqdefault.jpg"
+          },
+          {
+            "title": "2025 씨앗프로젝트",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2ni1vvnIXlBGn2C9MroxQj9",
+            "thumb": "https://i.ytimg.com/vi/3SubZfR6EOI/hqdefault.jpg",
+            "count": 3
+          },
+          {
+            "title": "INTO 회복 세미나",
+            "en": "",
+            "url": "https://www.youtube.com/playlist?list=PLflwLNaHAN2lV9ytRRagGVrjuoogPqBKW",
+            "thumb": "https://i.ytimg.com/vi/vkqOFSiW8nw/hqdefault.jpg",
+            "count": 4
+          }
+        ]
+      }
+    ]
+  },
+  "ministries": [
+    {
+      "id": "kids",
+      "name": "유치·초등부",
+      "en": "Children",
+      "icon": "kids",
+      "intro": "열방을 품는 워싱톤순복음제일교회 어린이는 하나님을 사랑하고 예수님을 믿으며 성령님의 인도대로 자라납니다.",
+      "verse": "요한복음 3:35",
+      "info": [
+        [
+          "예배",
+          "주일 오전 10:00 · 금요일 오후 7:30"
+        ],
+        [
+          "장소",
+          "Children Sunday School"
+        ],
+        [
+          "섬기는 분",
+          "정미미 전도사 (초등부) · 전현경 사모 (영아부)"
+        ]
+      ]
+    },
+    {
+      "id": "youth",
+      "name": "중·고등부",
+      "en": "Youth",
+      "icon": "youth",
+      "intro": "중·고등학생들의 은혜 공동체로, 예배와 기도로 하나님의 부르심을 찾아가는 교회학교입니다. 다음 세대 리더로 자라도록 세 가지 사역에 힘씁니다.",
+      "points": [
+        "학교 사역 — 학교 안에서 학업과 삶을 세워 가기",
+        "교회 사역 — 교회를 중심으로 삶을 넓히고 비전으로 세상에 영향 주기",
+        "세계 사역 — 구원과 교육 사역을 온 세계로"
+      ],
+      "verse": "에베소서 4:12",
+      "info": [
+        [
+          "예배",
+          "주일 오전 10:00 · 금요일 오후 7:30"
+        ],
+        [
+          "장소",
+          "Youth Chapel"
+        ],
+        [
+          "섬기는 분",
+          "길진범 전도사"
+        ]
+      ],
+      "playlist": "https://www.youtube.com/playlist?list=PLflwLNaHAN2m8nygWnW0O0fMM9l19JwjA"
+    },
+    {
+      "id": "em",
+      "name": "English Ministry",
+      "en": "청년 영어예배",
+      "icon": "em",
+      "intro": "Armed with the Word, built by Prayer, guided by the Holy Spirit.\nThe English Ministry is the generation of the Lord.",
+      "verse": "로마서 12:2",
+      "info": [
+        [
+          "예배",
+          "주일 오전 10:00 · 금요일 오후 7:30"
+        ],
+        [
+          "장소",
+          "English Ministry Chapel"
+        ],
+        [
+          "섬기는 분",
+          "황은지 목사"
+        ]
+      ]
+    },
+    {
+      "id": "choir",
+      "name": "임마누엘 성가대",
+      "en": "Immanuel Choir",
+      "icon": "choir",
+      "intro": "주일 예배를 찬양으로 섬기는 임마누엘 성가대입니다.",
+      "info": [
+        [
+          "지휘",
+          "유은경 지휘자"
+        ],
+        [
+          "반주",
+          "이가실 집사"
+        ],
+        [
+          "성가대장",
+          "정준 안수집사"
+        ]
+      ]
+    },
+    {
+      "id": "school",
+      "name": "워싱톤순복음한국학교",
+      "en": "Korean School",
+      "icon": "school",
+      "intro": "재미한국학교 워싱턴 협회와 워싱턴 교육원에 등재된 한국어 전문 교육 기관입니다. 한국어 교원 자격증을 가진 선생님, 페어팩스 공립학교 교사, 20년 이상 경력 선생님들이 그리스도의 사랑으로 가르칩니다.",
+      "points": [
+        "봄 1반 · 봄 2반 — 한글 자음과 모음, 한국 문화 체험, 구구단",
+        "여름반 — 조사·접미사·형용사로 탄탄한 문장 만들기",
+        "가을반 — 중급 문법과 어휘, 동화구연과 동시 암송",
+        "NAKS · WAKS 주최 동화구연, 시낭송, 나의 꿈 말하기 대회 참가"
+      ],
+      "info": [
+        [
+          "교장",
+          "박정현"
+        ]
+      ]
+    },
+    {
+      "id": "childcare",
+      "name": "Light Up Child Care",
+      "en": "영·유아 교육",
+      "icon": "childcare",
+      "intro": "세상을 향해 하나님의 빛을 비추는 아이들로 자라가기를 소망하며, 하나님의 사랑과 성경적 가치로 아이들을 섬기기 위해 세워진 영·유아 전문 교육 기관입니다.",
+      "points": [
+        "매일 아침 예배와 말씀, 성령의 아홉 가지 열매 성품 교육",
+        "기본 한국어 읽기·쓰기, 한국의 정서와 문화",
+        "Experience Early Learning — 연령·수준별 맞춤 교육"
+      ]
+    },
+    {
+      "id": "mission",
+      "name": "해외선교",
+      "en": "International Mission",
+      "icon": "mission",
+      "intro": "전 세계에서 활동하시는 선교사님들을 통해 세계 각지에 하나님의 나라를 세우고, 말씀을 선포하며, 그 말씀으로 세계가 하나 되도록 기도하며 선교를 지원합니다.",
+      "chips": [
+        "마케도니아",
+        "이스라엘",
+        "부룬디",
+        "몽골",
+        "C국",
+        "케냐",
+        "인도네시아",
+        "스리랑카",
+        "필리핀",
+        "레바논",
+        "아이티",
+        "T국",
+        "탈북민 사역",
+        "한국",
+        "We Sing Hope"
+      ]
+    }
+  ],
+  "staff": [
+    [
+      "윤창재",
+      "담임목사",
+      "Senior Pastor"
+    ],
+    [
+      "박정재",
+      "목사",
+      "하와이 파견"
+    ],
+    [
+      "황은지",
+      "목사",
+      "English Ministry"
+    ],
+    [
+      "임해경",
+      "전도사",
+      "셀 담당"
+    ],
+    [
+      "강미우",
+      "전도사",
+      "새가족팀"
+    ],
+    [
+      "김승희",
+      "전도사",
+      "선교관"
+    ],
+    [
+      "구은희",
+      "전도사",
+      "중보팀 · 성가대"
+    ],
+    [
+      "정미미",
+      "전도사",
+      "초등부"
+    ],
+    [
+      "길진범",
+      "전도사",
+      "중고등부"
+    ],
+    [
+      "전현경",
+      "사모",
+      "영아부 · 홍보팀"
+    ]
+  ],
+  "teams": [
+    "목회협력위원회",
+    "재정팀",
+    "역사편찬위원회",
+    "제1남선교회",
+    "제2남선교회",
+    "여선교회",
+    "권사회",
+    "총무팀",
+    "통역팀",
+    "미디어팀",
+    "예배팀",
+    "선교팀",
+    "중보팀",
+    "홍보팀",
+    "새가족팀",
+    "신망애회"
+  ],
+  "bulletinDate": "10월 4일 주일 광고",
+  "announcementVideo": "https://www.youtube.com/@FGFCW",
+  "news": [
+    {
+      "tag": "기도",
+      "title": "10월 '12시간 예배 & 기도회'",
+      "meta": "10월 16일(금) 오후 7:30 ~ 17일(토) 새벽예배",
+      "body": "10월 '12시간 예배 & 기도회'가 16일 오후 7시 30분, 금요성령대망회를 시작으로 다음 날(17일) 토요새벽예배까지 진행됩니다.\nDevotion으로 참여하고자 하는 분들은 1층 게시판에 이름을 써 주시기 바랍니다(30분 단위)."
+    },
+    {
+      "tag": "안내",
+      "title": "마우이순복음교회 비전 트립 방문",
+      "meta": "10월 5일(월)부터 한 주간 · 서정완 목사님과 교회학교",
+      "body": "내일(5일)부터 한 주간 마우이순복음교회 서정완 목사님과 교회학교 아이들이 비전 트립으로 방문합니다."
+    },
+    {
+      "tag": "예배",
+      "title": "월요 새벽예배가 온라인으로 바뀝니다",
+      "meta": "10월 5일(월)부터 · 전교인 카톡방 영상",
+      "body": "내일(5일)부터 월요 새벽예배가 온라인으로 바뀝니다. 주일 저녁에 전교인 카톡방을 통해서 제공되는 동영상(여의도순복음교회 이영훈 목사님 새벽예배 설교)을 통해 가정에서 동참해 주시기 바랍니다."
+    },
+    {
+      "tag": "안내",
+      "title": "팀장회의",
+      "meta": "10월 11일(주일) 오후 2:15 · 선교관",
+      "body": "다음 주일(11일) 팀장회의가 오후 2시 15분 선교관에서 있습니다. 모든 팀장님들의 참석 부탁드립니다."
+    },
+    {
+      "tag": "안내",
+      "title": "교회 외부 정리 및 청소",
+      "meta": "10월 24일(토) 오전 8시",
+      "body": "교회 외부 정리 및 청소가 24일(토) 오전 8시부터 있습니다. 많은 남성 성도님들의 동참을 부탁드립니다."
+    },
+    {
+      "tag": "행사",
+      "title": "하반기 효도 야유회",
+      "meta": "10월 25일(주일) · 교회 뒷마당",
+      "body": "하반기 야유회가 25일(주일) 교회 뒷마당에서 있습니다. 특별히 이번 야유회는 70세 이상의 성도님들을 위한 효도 야유회로 진행됩니다. 게시판에 부착된 팀을 확인하시기 바랍니다.\n10월 셀팅은 야유회로 대체됩니다."
+    },
+    {
+      "tag": "행사",
+      "title": "3차 새가족환영회",
+      "meta": "10월 4일(주일) 오후 4시 · 담임목사 사택",
+      "body": "3차 새가족환영회가 오늘(4일) 오후 4시부터 담임목사 사택에서 있습니다. 올해 5월부터 9월까지 새가족으로 오신 분들은 꼭 참석 부탁드립니다."
+    },
+    {
+      "tag": "안내",
+      "title": "목회협력위원회",
+      "meta": "10월 4일(주일) 오후 2:15 · 목회협력위원회실",
+      "body": "목회협력위원회가 오늘(4일) 오후 2시 15분에 목회협력위원회실에서 있습니다."
+    },
+    {
+      "tag": "기도",
+      "title": "오늘의 기도회",
+      "meta": "오후 12:30 권사기도회 · 오후 1시 연합중보·학부모기도회",
+      "body": "연합중보기도회, 중고등부 학부모기도회: 오후 1시 대성전\n권사기도회: 오후 12시 30분 1층 권사회실"
+    },
+    {
+      "tag": "감사",
+      "title": "결혼 50주년 축하 친교식사",
+      "meta": "이규성 장로님 · 이옥순 권사님",
+      "body": "오늘 친교식사는 이규성 장로님과 이옥순 권사님이 결혼 50주년을 기념하여 준비하셨습니다. 축하드립니다."
+    }
+  ],
+  "events": [
+    {
+      "date": "10/5",
+      "day": "월~",
+      "title": "마우이순복음교회 비전 트립 방문 (한 주간)",
+      "meta": "서정완 목사님과 교회학교 아이들"
+    },
+    {
+      "date": "10/5",
+      "day": "월",
+      "title": "월요 새벽예배 온라인 시작",
+      "meta": "영상은 주일 저녁 전교인 카톡방으로"
+    },
+    {
+      "date": "10/11",
+      "day": "주일",
+      "title": "팀장회의",
+      "meta": "오후 2:15 · 선교관"
+    },
+    {
+      "date": "10/16",
+      "day": "금~토",
+      "title": "12시간 예배 & 기도회",
+      "meta": "금 오후 7:30 금요성령대망회 ~ 토 새벽예배"
+    },
+    {
+      "date": "10/24",
+      "day": "토",
+      "title": "교회 외부 정리 및 청소",
+      "meta": "오전 8:00 · 남성 성도님 동참"
+    },
+    {
+      "date": "10/25",
+      "day": "주일",
+      "title": "하반기 효도 야유회",
+      "meta": "교회 뒷마당 · 10월 셀팅 대체"
+    }
+  ],
+  "giving": {
+    "funds": [
+      {
+        "group": "",
+        "items": [
+          "십일조",
+          "주일헌금",
+          "감사헌금",
+          "선교헌금",
+          "건축헌금",
+          "부활절",
+          "추수감사절",
+          "성탄절",
+          "기타헌금"
+        ]
+      }
+    ],
+    "zelle": "",
+    "zelleName": "",
+    "onlineUrl": "https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-25346",
+    "checkPayee": "Full Gospel First Church of Washington",
+    "mailAddress": "6401 Lincolnia Rd, Alexandria, VA 22312",
+    "footNote": "Tax deductible organization",
+    "contact": ""
+  }
+}

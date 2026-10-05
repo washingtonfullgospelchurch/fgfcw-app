@@ -1,0 +1,47 @@
+워싱턴 순복음제일교회 앱 파일
+
+■ 매주 광고 바꾸기
+  data.json 파일만 메모장으로 열어 고치고 다시 올리면 됩니다.
+  - bulletinDate : "10월 4일 주일 광고" 처럼 날짜
+  - news : 광고 목록 (tag는 감사/행사/예배/안내/기도/나눔 중 하나)
+  - events : 일정 탭에 나올 행사
+  따옴표(")와 쉼표(,) 위치가 틀리면 소식이 안 보이니 주의해 주세요.
+
+■ 파일 구성
+  index.html  앱 화면
+  style.css   디자인
+  app.js      동작
+  sw.js       인터넷 없이도 열리게 하는 파일
+  manifest.webmanifest  앱 이름과 아이콘 정보
+  icons/      앱 아이콘
+
+■ 설치 안내 링크
+  앱 주소 뒤에 ?install 을 붙여 보내면 설치 방법이 바로 뜹니다.
+  예) https://앱주소/?install
+
+■ 온라인 헌금 정보 넣기
+  data.json 안의 "giving" 부분을 고치면 헌금 화면이 바뀝니다.
+  - funds      : 헌금 종류 목록 (group은 묶음 제목, items는 항목)
+  - zelle      : Zelle로 받는 이메일이나 전화번호 → 넣으면 "Zelle" 방법이 생깁니다
+  - zelleName  : Zelle에 뜨는 받는 사람 이름
+  - onlineUrl  : 카드 헌금 사이트 주소 → 넣으면 "카드 / 은행계좌" 방법이 생깁니다
+  - checkPayee : 수표 받는 곳 이름
+  - mailAddress: 수표 보낼 주소
+  - footNote   : 화면 맨 아래 문구
+  - contact    : 헌금 문의처 (예: "재정부 703-000-0000")
+  비워 둔("") 항목은 화면에 나오지 않습니다.
+
+■ 예배 시간 · 설교 재생목록 · 부서 소개
+  data.json 안에서 고칠 수 있습니다.
+  - worship / schoolWorship : 예배 시간 (홈의 "다음 예배"도 여기서 계산됩니다)
+  - playlists : 설교 탭 재생목록 (main = 위쪽 4개, groups = 아래 묶음)
+  - ministries : 부서 소개 (intro 소개글, info 예배·장소·섬기는 분)
+  - staff / teams : 섬기는 분들, 봉사 부서
+
+■ 리딩지저스 통독 (reading.json)
+  - 날짜에 맞춰 매일 자동으로 그날 영상이 바뀝니다. (주일 포함 매일)
+  - 기준: 2026년 10월 2일 = 5권 6강 5일차 (사도행전 25-26장)
+  - 이번 45주 통독은 2026년 11월 20일(요한계시록 22장)에 끝납니다.
+  - 새로 1권부터 시작할 때는 reading.json 맨 앞의
+    "anchorDate"를 시작 날짜(예: "2027-01-04"), "anchorIndex"를 0 으로 바꿔 주세요.
+  - 통독이 하루 밀리거나 당겨졌을 때도 anchorDate / anchorIndex로 맞출 수 있습니다.

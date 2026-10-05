@@ -1,0 +1,16 @@
+{
+  "name": "워싱턴 순복음제일교회",
+  "short_name": "순복음제일",
+  "description": "워싱턴 순복음제일교회 앱 — 예배, 설교, 교회 소식",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5F6F8",
+  "theme_color": "#2E3092",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

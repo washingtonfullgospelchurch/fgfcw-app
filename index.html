@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>워싱턴 순복음제일교회</title>
+<meta name="description" content="예배 · 설교 · 교회 소식 · 온라인 헌금을 한곳에서. 워싱턴 순복음제일교회 앱">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="워싱턴 순복음제일교회">
+<meta property="og:title" content="워싱턴 순복음제일교회 앱">
+<meta property="og:description" content="예배 · 설교 · 교회 소식 · 온라인 헌금을 한곳에서. 눌러서 홈 화면에 추가하세요.">
+<meta property="og:url" content="https://fgfcw.netlify.app/">
+<meta property="og:image" content="https://fgfcw.netlify.app/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2E3092">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="순복음제일">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <img src="icons/emblem.png" alt="교회 로고" width="42" height="42">
+      <div>
+        <div class="brand-ko">워싱턴 순복음제일교회</div>
+        <div class="brand-en">Full Gospel First Church of Washington</div>
+      </div>
+    </div>
+    <button id="installTop" class="install-chip" hidden>앱 설치</button>
+  </header>
+
+  <main id="main">
+    <!-- 홈 -->
+    <section data-tab="home" class="page">
+      <div class="hero">
+        <svg class="hero-art" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 78 L60 50 L95 62 L160 18 L190 36 L210 26 L280 66 L330 52 L400 80 L400 120 L0 120 Z" fill="rgba(255,255,255,.08)"/>
+          <path d="M0 92 C60 84 110 100 170 92 S290 84 400 94 L400 120 L0 120 Z" fill="rgba(0,174,239,.30)"/>
+          <path d="M0 104 C70 98 130 112 200 104 S320 98 400 106 L400 120 L0 120 Z" fill="rgba(0,174,239,.40)"/>
+        </svg>
+        <div class="hero-kicker">A CHURCH FOR HIS KINGDOM</div>
+        <div class="hero-title">주님의 이름으로<br>환영합니다</div>
+        <div class="next" id="nextService">
+          <span class="next-label">다음 예배</span>
+          <strong id="nextName">주일 2부 예배</strong>
+          <span id="nextWhen">주일 오전 10:00</span>
+        </div>
+        <div class="hero-btns">
+          <a class="btn-live" href="https://www.youtube.com/@FGFCW/live"><span class="live-dot"></span>실시간 예배</a>
+          <button class="btn-ghost" data-go="sermon"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z M10 9l5 3-5 3z"/></svg>설교 영상</button>
+        </div>
+      </div>
+
+      <section class="card rj" aria-labelledby="rjTitle">
+        <div class="rj-top">
+          <div><span class="kicker">READING JESUS</span><h2 id="rjTitle">오늘의 통독</h2></div>
+          <div class="rj-nav">
+            <button id="rjPrev" aria-label="이전 날"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <span id="rjDate">10월 2일 (금)</span>
+            <button id="rjNext" aria-label="다음 날"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+        <a class="rj-video" id="rjLink" href="#">
+          <span class="thumb"><img id="rjThumb" src="" alt=""><span class="rj-play"><svg viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></svg></span></span>
+        </a>
+        <div class="rj-rest" id="rjRest" hidden></div>
+        <div class="rj-info">
+          <div class="rj-count" id="rjCountWrap"><b id="rjCount"></b><span>일차</span><em id="rjTotal"></em></div>
+          <small id="rjDay"></small>
+          <strong id="rjPassage"></strong>
+        </div>
+        <div class="rj-progress" id="rjProgWrap"><div class="rj-bar"><span id="rjBar"></span></div><small id="rjProg"></small></div>
+        <button class="link-btn rj-today" id="rjToday" hidden>오늘로 돌아가기</button>
+      </section>
+
+      <div class="pillars" aria-label="교회 비전">
+        <div><b>PRAYER</b><span>기도</span></div>
+        <div><b>WORD</b><span>말씀</span></div>
+        <div><b>SERVE</b><span>섬김</span></div>
+        <div><b>GO</b><span>전도·선교</span></div>
+      </div>
+
+      <div class="quick">
+        <button class="quick-item" data-go="give"><svg viewBox="0 0 24 24"><path d="M12 13s-4-2.6-4-5.4A2.2 2.2 0 0 1 12 6.3a2.2 2.2 0 0 1 4 1.3C16 10.4 12 13 12 13z M3 15h3l3.5 1.5H14a1.5 1.5 0 0 1 0 3H9.5 M14 18.5l5-2.5a1.5 1.5 0 0 1 1.5 2.6L15 21H3"/></svg>온라인 헌금</button>
+        <button class="quick-item" data-go="cal"><svg viewBox="0 0 24 24"><path d="M4 6h16v14H4z M4 10h16 M9 3v4 M15 3v4"/></svg>교회 일정</button>
+        <button class="quick-item" data-go="church" data-scroll="ministries"><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M2 21a7 7 0 0 1 14 0 M16 3.5a4 4 0 0 1 0 7.5 M18 14a6 6 0 0 1 4 7"/></svg>부서 소개</button>
+        <a class="quick-item" href="https://maps.google.com/?q=6401+Lincolnia+Rd,+Alexandria,+VA+22312"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z M12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>오시는 길</a>
+      </div>
+
+      <div class="sec-head"><h2>이번 주 광고</h2><button class="link-btn" data-go="news">전체 보기</button></div>
+      <div class="card list" id="homeNews"></div>
+
+      <div class="sec-head"><h2>예배 영상</h2><button class="link-btn" data-go="sermon">더 보기</button></div>
+      <div class="hscroll" id="homeVideos"></div>
+
+      <div class="sec-head"><h2>예배 시간</h2><button class="link-btn" data-go="church" data-scroll="worship">자세히</button></div>
+      <div class="card times" id="homeTimes"></div>
+
+      <div class="card mission">
+        <img src="icons/emblem.png" alt="" width="52" height="52">
+        <div class="mission-en">A CHURCH FOR HIS KINGDOM</div>
+        <p>기도와 말씀이 충만한 교회<br>나눔과 섬김을 실천하는 교회<br>전도와 선교에 힘쓰는 교회</p>
+      </div>
+    </section>
+
+    <!-- 설교 -->
+    <section data-tab="sermon" class="page" hidden>
+      <div class="page-head"><span class="kicker">SERMONS</span><h1>설교 · 예배 영상</h1></div>
+      <a class="live-banner" href="https://www.youtube.com/@FGFCW/live">
+        <span class="live-pill"><span class="live-dot"></span>LIVE</span>
+        <span class="grow"><strong>실시간 예배 보기</strong><small>예배 시간에 유튜브로 생중계돼요</small></span>
+        <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+      <div class="main-lists" id="mainLists"></div>
+      <div id="otherLists"></div>
+      <a class="card row-link" href="https://www.youtube.com/@FGFCW">
+        <span class="yt-box"><svg viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></svg></span>
+        <span class="grow"><strong>유튜브 교회 채널</strong><small>워싱톤순복음제일교회 FGFCW</small></span>
+        <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+    </section>
+
+    <!-- 온라인 헌금 -->
+    <section data-tab="give" class="page give-page" hidden>
+      <h1 class="give-h1">워싱턴 순복음제일교회 온라인헌금</h1>
+
+      <label class="amount" for="amount">
+        <span class="amount-cur">$</span>
+        <span class="amount-show" aria-hidden="true"><span id="amountText">0</span><span class="caret"></span></span>
+        <input id="amount" class="amount-input" type="text" inputmode="decimal" autocomplete="off" aria-label="헌금 금액 (달러)">
+      </label>
+
+      <div class="field">
+        <label for="method">헌금 방법</label>
+        <div class="select-wrap"><select id="method"></select></div>
+      </div>
+
+      <div class="field">
+        <label for="fund">헌금 종류</label>
+        <div class="select-wrap"><select id="fund"><option value="">헌금 종류 선택</option></select></div>
+      </div>
+
+      <div class="field">
+        <span class="field-label" id="freqLabel">주기</span>
+        <div class="freq" role="radiogroup" aria-labelledby="freqLabel">
+          <button type="button" role="radio" aria-checked="true" data-freq="한 번">한 번</button>
+          <button type="button" role="radio" aria-checked="false" data-freq="매월">매월</button>
+          <button type="button" role="radio" aria-checked="false" data-freq="분기마다">분기마다</button>
+          <button type="button" role="radio" aria-checked="false" data-freq="매년">매년</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="giver">헌금자 이름 <small>(메모에 들어가요)</small></label>
+        <input id="giver" class="text-in" type="text" placeholder="예: 홍길동" autocomplete="name">
+      </div>
+
+      <button class="btn-give" id="giveGo" disabled>$0.00 헌금 계속하기</button>
+
+      <div class="give-footer">
+        <div>워싱턴 순복음제일교회</div>
+        <div id="giveFootNote"></div>
+        <div id="giveContact"></div>
+      </div>
+    </section>
+    <!-- 소식 -->
+    <section data-tab="news" class="page" hidden>
+      <div class="page-head"><span class="kicker">NEWS</span><h1>교회 소식</h1></div>
+      <p class="sub" id="bulletinDate"></p>
+      <div id="newsList" class="stack"></div>
+    </section>
+
+    <!-- 일정 -->
+    <section data-tab="cal" class="page" hidden>
+      <div class="page-head"><span class="kicker">CALENDAR</span><h1>교회 일정</h1></div>
+      <div class="card list">
+        <div id="eventList"></div>
+      </div>
+      <p class="sub-note">정기 예배 시간은 교회 탭의 예배 안내에서 볼 수 있어요.</p>
+    </section>
+
+    <!-- 교회 -->
+    <section data-tab="church" class="page" hidden>
+      <div class="page-head"><span class="kicker">ABOUT US</span><h1>교회 소개</h1></div>
+
+      <div class="card greet">
+        <div class="greet-top">
+          <img src="icons/emblem.png" alt="" width="48" height="48">
+          <div><small>담임목사 인사말</small><strong>윤창재 담임목사</strong></div>
+        </div>
+        <p id="greeting"></p>
+        <a class="link-inline" href="http://www.wfgtv.com/main/sub.html?pageCode=1">홈페이지에서 전체 보기</a>
+      </div>
+
+      <h2 class="sec-title" id="worship">예배 안내</h2>
+      <div class="card times" id="worshipTimes"></div>
+      <div class="card times" id="schoolTimes"></div>
+      <p class="sub-note">* 표시된 예배는 통역기를 지원하거나 영어로 드려요.</p>
+
+      <h2 class="sec-title" id="ministries">부서 소개</h2>
+      <div class="min-grid" id="ministryGrid"></div>
+
+      <h2 class="sec-title">섬기는 분들</h2>
+      <div class="card staff" id="staffList"></div>
+      <div class="chips" id="teamChips"></div>
+
+      <h2 class="sec-title">오시는 길</h2>
+      <div class="card info">
+        <div><small>주소</small><strong>6401 Lincolnia Rd, Alexandria, VA 22312</strong></div>
+        <div><small>전화</small><strong>(703) 642-3267</strong></div>
+        <div class="btn-row">
+          <a class="btn-outline" href="https://maps.google.com/?q=6401+Lincolnia+Rd,+Alexandria,+VA+22312"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z M12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>길찾기</a>
+          <a class="btn-outline" href="tel:+17036423267"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>전화하기</a>
+        </div>
+      </div>
+
+      <div class="card list">
+        <button class="menu-row" id="openInstall"><span>휴대폰에 앱 설치하는 방법</span><svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+        <a class="menu-row" href="https://www.youtube.com/@FGFCW"><span>유튜브 교회 채널</span><svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+        <a class="menu-row" href="http://www.wfgtv.com/"><span>교회 홈페이지</span><svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar" aria-label="메뉴">
+    <button data-go="home" aria-current="page"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>홈</button>
+    <button data-go="sermon"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z M10 9l5 3-5 3z"/></svg>설교</button>
+    <button data-go="give"><svg viewBox="0 0 24 24"><path d="M12 13s-4-2.6-4-5.4A2.2 2.2 0 0 1 12 6.3a2.2 2.2 0 0 1 4 1.3C16 10.4 12 13 12 13z M3 15h3l3.5 1.5H14a1.5 1.5 0 0 1 0 3H9.5 M14 18.5l5-2.5a1.5 1.5 0 0 1 1.5 2.6L15 21H3"/></svg>헌금</button>
+    <button data-go="news"><svg viewBox="0 0 24 24"><path d="M3 10v4h4l6 4V6l-6 4H3z M17 9a4 4 0 0 1 0 6"/></svg>소식</button>
+    <button data-go="cal"><svg viewBox="0 0 24 24"><path d="M4 6h16v14H4z M4 10h16 M9 3v4 M15 3v4"/></svg>일정</button>
+    <button data-go="church"><svg viewBox="0 0 24 24"><path d="M12 2v4 M10 4h4 M5 21V11l7-5 7 5v10 M9 21v-5a3 3 0 0 1 6 0v5 M3 21h18"/></svg>교회</button>
+  </nav>
+</div>
+
+<!-- 설치 안내 -->
+<div class="sheet-bg" id="sheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <button class="sheet-close" id="closeInstall" aria-label="닫기"><svg viewBox="0 0 24 24"><path d="M6 6l12 12 M18 6L6 18"/></svg></button>
+    <div class="sheet-icon"><img src="icons/emblem.png" alt="" width="68" height="68"></div>
+    <h2 id="sheetTitle">교회 앱 설치하기</h2>
+    <p class="sub center">앱스토어 없이 홈 화면에 바로 추가할 수 있어요</p>
+    <div id="installAndroid" class="card steps">
+      <strong>안드로이드</strong>
+      <button class="btn-primary" id="installNow">지금 설치하기</button>
+      <ol><li>버튼이 안 되면 Chrome 오른쪽 위 ⋮ 메뉴를 눌러요</li><li>"앱 설치" 또는 "홈 화면에 추가"를 눌러요</li></ol>
+    </div>
+    <div id="installIos" class="card steps">
+      <strong>아이폰</strong>
+      <ol>
+        <li>Safari로 이 페이지를 열어요 (카톡 안에서 열렸다면 오른쪽 아래 Safari 아이콘으로 열기)</li>
+        <li>화면 아래 <svg class="inline" viewBox="0 0 24 24"><path d="M12 3v12 M8 7l4-4 4 4 M5 11v9h14v-9"/></svg> 공유 버튼을 눌러요</li>
+        <li>"홈 화면에 추가"를 누르면 끝!</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- 헌금 진행 안내 -->
+<div class="sheet-bg" id="giveSheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="giveSheetTitle">
+    <button class="sheet-close" id="closeGive" aria-label="닫기"><svg viewBox="0 0 24 24"><path d="M6 6l12 12 M18 6L6 18"/></svg></button>
+    <h2 id="giveSheetTitle">헌금 확인</h2>
+    <div class="card summary">
+      <div><span>금액</span><strong id="sumAmount"></strong></div>
+      <div><span>헌금 종류</span><strong id="sumFund"></strong></div>
+      <div><span>주기</span><strong id="sumFreq"></strong></div>
+    </div>
+    <div class="card steps" id="stepZelle" hidden>
+      <strong>Zelle로 보내기</strong>
+      <ol>
+        <li>은행 앱에서 Zelle을 열어요</li>
+        <li>받는 사람에 아래 주소를 붙여 넣어요</li>
+        <li>금액을 넣고, 메모에 아래 내용을 붙여 넣어요</li>
+      </ol>
+      <div class="copy-row"><div><small id="zelleNameLabel">받는 사람</small><strong id="zelleId"></strong></div><button class="copy-btn" data-copy="zelleId">복사</button></div>
+      <div class="copy-row"><div><small>메모</small><strong id="memoZelle"></strong></div><button class="copy-btn" data-copy="memoZelle">복사</button></div>
+      <p class="give-note" id="zelleRecurring" hidden>정기 헌금은 은행 앱의 Zelle에서 "반복(Recurring)" 송금으로 설정하실 수 있어요.</p>
+    </div>
+    <div class="card steps" id="stepOnline" hidden>
+      <strong>카드·은행계좌로 하기</strong>
+      <ol>
+        <li>아래 버튼을 누르면 교회 헌금 페이지(Zeffy)가 열려요</li>
+        <li>금액에 <b id="onAmount"></b>을 넣어요</li>
+        <li id="onFreqStep">주기에서 <b id="onFreq"></b>을 골라요</li>
+        <li>메모(메시지) 칸이 있으면 아래 내용을 붙여 넣어요</li>
+      </ol>
+      <div class="copy-row"><div><small>메모</small><strong id="memoOnline"></strong></div><button class="copy-btn" data-copy="memoOnline">복사</button></div>
+      <a class="btn-primary as-link" id="onlineLink" href="#" target="_blank" rel="noopener">헌금 페이지 열기</a>
+      <p class="give-note">결제 화면에 나오는 Zeffy 후원금(팁)은 선택 사항이에요. 0으로 바꾸셔도 헌금은 그대로 교회에 전달돼요.</p>
+    </div>
+    <div class="card steps" id="stepCheck" hidden>
+      <strong>수표로 하기</strong>
+      <div class="give-info">
+        <div><small>받는 곳 (Pay to the order of)</small><strong id="checkPayee"></strong></div>
+        <div><small>보낼 주소</small><strong id="mailAddress"></strong></div>
+      </div>
+      <div class="copy-row"><div><small>메모 (Memo)</small><strong id="memoCheck"></strong></div><button class="copy-btn" data-copy="memoCheck">복사</button></div>
+      <p class="give-note">예배 시간에 헌금함에 넣으셔도 돼요.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 부서 상세 -->
+<div class="sheet-bg" id="minSheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="minTitle">
+    <button class="sheet-close" id="closeMin" aria-label="닫기"><svg viewBox="0 0 24 24"><path d="M6 6l12 12 M18 6L6 18"/></svg></button>
+    <div class="min-head"><span class="min-icon big" id="minIcon"></span><div><small id="minEn"></small><h2 id="minTitle"></h2></div></div>
+    <p class="min-intro" id="minIntro"></p>
+    <ul class="min-points" id="minPoints"></ul>
+    <div class="card summary" id="minInfo"></div>
+    <div class="chips" id="minChips"></div>
+    <p class="min-verse" id="minVerse"></p>
+    <a class="btn-red as-link" id="minPlaylist" href="#" hidden><svg viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></svg>영상 보기</a>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

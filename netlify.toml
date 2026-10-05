@@ -1,0 +1,14 @@
+# Netlify 설정 — GitHub에 올라오면 이 폴더 그대로 사이트로 배포됩니다
+[build]
+  publish = "."
+  command = ""
+
+# 소식·통독·앱 파일은 항상 최신으로 받아 가도록
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Cache-Control = "no-cache"
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
