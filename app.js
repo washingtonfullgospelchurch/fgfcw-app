@@ -43,6 +43,7 @@
     }
   });
   var start = (location.hash || '#home').slice(1);
+  if (start === 'give') start = 'home'; // 온라인 헌금 임시 숨김
   go(document.querySelector('.page[data-tab="' + start + '"]') ? start : 'home');
 
   /* ---------- 소식 ---------- */

@@ -47,8 +47,11 @@
           <path d="M0 92 C60 84 110 100 170 92 S290 84 400 94 L400 120 L0 120 Z" fill="rgba(0,174,239,.30)"/>
           <path d="M0 104 C70 98 130 112 200 104 S320 98 400 106 L400 120 L0 120 Z" fill="rgba(0,174,239,.40)"/>
         </svg>
+        <div class="hero-mission">
+          <img src="icons/emblem.png" alt="교회 로고" width="64" height="64">
+          <div class="hero-title">예배로 깊어지고,<br>선교로 넓어지는,<br>그리스도의 몸된 교회</div>
+        </div>
         <div class="hero-kicker">THE CHURCH AS THE BODY OF CHRIST</div>
-        <div class="hero-title">주님의 이름으로<br>환영합니다</div>
         <div class="next" id="nextService">
           <span class="next-label">다음 예배</span>
           <strong id="nextName">주일 2부 예배</strong>
@@ -103,7 +106,6 @@
       </section>
 
       <div class="quick">
-        <button class="quick-item" data-go="give"><svg viewBox="0 0 24 24"><path d="M12 13s-4-2.6-4-5.4A2.2 2.2 0 0 1 12 6.3a2.2 2.2 0 0 1 4 1.3C16 10.4 12 13 12 13z M3 15h3l3.5 1.5H14a1.5 1.5 0 0 1 0 3H9.5 M14 18.5l5-2.5a1.5 1.5 0 0 1 1.5 2.6L15 21H3"/></svg>온라인 헌금</button>
         <button class="quick-item" data-go="cal"><svg viewBox="0 0 24 24"><path d="M4 6h16v14H4z M4 10h16 M9 3v4 M15 3v4"/></svg>교회 일정</button>
         <button class="quick-item" data-go="church" data-scroll="ministries"><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M2 21a7 7 0 0 1 14 0 M16 3.5a4 4 0 0 1 0 7.5 M18 14a6 6 0 0 1 4 7"/></svg>부서 소개</button>
         <a class="quick-item" href="https://maps.google.com/?q=6401+Lincolnia+Rd,+Alexandria,+VA+22312"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z M12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>오시는 길</a>
@@ -118,11 +120,6 @@
       <div class="sec-head"><h2>예배 시간</h2><button class="link-btn" data-go="church" data-scroll="worship">자세히</button></div>
       <div class="card times" id="homeTimes"></div>
 
-      <div class="card mission">
-        <img src="icons/emblem.png" alt="" width="52" height="52">
-        <p>예배로 깊어지고,<br>선교로 넓어지는,<br>그리스도의 몸된 교회</p>
-        <div class="mission-name"><strong>워싱턴순복음제일교회</strong><span>Full Gospel First Church of Washington</span></div>
-      </div>
     </section>
 
     <!-- 설교 -->
@@ -247,7 +244,6 @@
   <nav class="tabbar" aria-label="메뉴">
     <button data-go="home" aria-current="page"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>홈</button>
     <button data-go="sermon"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z M10 9l5 3-5 3z"/></svg>설교</button>
-    <button data-go="give"><svg viewBox="0 0 24 24"><path d="M12 13s-4-2.6-4-5.4A2.2 2.2 0 0 1 12 6.3a2.2 2.2 0 0 1 4 1.3C16 10.4 12 13 12 13z M3 15h3l3.5 1.5H14a1.5 1.5 0 0 1 0 3H9.5 M14 18.5l5-2.5a1.5 1.5 0 0 1 1.5 2.6L15 21H3"/></svg>헌금</button>
     <button data-go="news"><svg viewBox="0 0 24 24"><path d="M3 10v4h4l6 4V6l-6 4H3z M17 9a4 4 0 0 1 0 6"/></svg>소식</button>
     <button data-go="cal"><svg viewBox="0 0 24 24"><path d="M4 6h16v14H4z M4 10h16 M9 3v4 M15 3v4"/></svg>일정</button>
     <button data-go="church"><svg viewBox="0 0 24 24"><path d="M12 2v4 M10 4h4 M5 21V11l7-5 7 5v10 M9 21v-5a3 3 0 0 1 6 0v5 M3 21h18"/></svg>교회</button>

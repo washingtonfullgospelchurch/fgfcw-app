@@ -336,3 +336,14 @@ svg.inline{width:18px;height:18px;vertical-align:-3px}
 .rj-read-btn{height:46px;border-radius:14px;background:var(--tint);color:var(--navy);font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 16px}
 .rj-read-btn svg{width:18px;height:18px}
 .rj-read-btn.en{background:#E3F5F4;color:#0B6E8F}
+
+/* 홈 첫 화면: 사명선언 + 로고 */
+.hero-mission{display:flex;align-items:center;gap:16px}
+.hero-mission img{width:64px;height:64px;object-fit:contain;flex-shrink:0;background:#fff;border-radius:20px;padding:6px;box-sizing:content-box;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.hero-mission .hero-title{font-size:23px;line-height:1.45}
+.hero-kicker{font-size:10.5px;margin-top:-4px}
+@media (max-width:370px){.hero-mission .hero-title{font-size:20px}.hero-mission img{width:52px;height:52px}}
+
+/* 온라인 헌금 임시 숨김: 하단 탭 5칸, 바로가기 3칸 */
+.tabbar{grid-template-columns:repeat(5,minmax(0,1fr))}
+.quick{grid-template-columns:repeat(3,minmax(0,1fr))}
