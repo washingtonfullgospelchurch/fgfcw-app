@@ -9,7 +9,8 @@
   function el(tag, attrs, children) {
     var n = document.createElement(tag);
     Object.keys(attrs || {}).forEach(function (k) {
-      if (k === 'text') n.textContent = attrs[k];
+      // "17일(토)", "10:30am" 같은 묶음이 줄 끝에서 갈라지지 않도록 붙여 둠
+      if (k === 'text') n.textContent = String(attrs[k]).replace(/([0-9가-힣])\(/g, '$1\u2060(');
       else if (k === 'style') n.setAttribute('style', attrs[k]);
       else n.setAttribute(k, attrs[k]);
     });
